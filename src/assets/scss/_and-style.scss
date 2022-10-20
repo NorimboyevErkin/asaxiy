@@ -1,3 +1,8 @@
 .ant-dropdown-menu-item{
     padding: 0;
 }
+.ant-drawer-content-wrapper{
+    @media (max-width:450px) {
+        width: 80% !important;
+    }
+}

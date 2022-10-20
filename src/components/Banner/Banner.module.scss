@@ -2,7 +2,7 @@
   display: flex;
   background: var(--primary);
   border-radius: 20px;
-  
+
   &__img {
     flex: 1;
     justify-content: center;
@@ -27,8 +27,9 @@
     }
     &__footer {
       display: flex;
-      justify-content: space-between;
+      justify-content:center;
       align-items: center;
+      flex-wrap: wrap;
       gap: 16px;
     }
   }
