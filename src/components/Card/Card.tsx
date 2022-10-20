@@ -6,11 +6,15 @@ import { useDispatch } from "react-redux";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { SlBasket } from "react-icons/sl";
 import { pushBasket } from "../../redux-toolkit/reducers/basket";
-import { pushFavorites } from "../../redux-toolkit/reducers/favorites";
+import {
+  deleteFavorites,
+  pushFavorites,
+} from "../../redux-toolkit/reducers/favorites";
 import { useState } from "react";
 
 type Props = {
   data: {
+    id?: string;
     img: string;
     title: string;
     previousPrice?: number;
@@ -23,6 +27,7 @@ type Props = {
 };
 function Card({ data }: Props) {
   const {
+    id,
     img,
     title,
     presentPrice,
@@ -39,9 +44,14 @@ function Card({ data }: Props) {
     dispatch(pushBasket(data));
   };
 
-  const addFavorite = () => {
-    dispatch(pushFavorites(data));
-    setisLike(!isLike);
+  const setFavorite = () => {
+    if (!isLike) {
+      dispatch(pushFavorites(data));
+      setisLike(true);
+    } else {
+      dispatch(deleteFavorites(id));
+      setisLike(false);
+    }
   };
   return (
     <div className={styles["card-box"]}>
@@ -85,7 +95,7 @@ function Card({ data }: Props) {
         <button className={styles["add-card-btn"]} onClick={addBasket}>
           <SlBasket />
         </button>
-        <button className={styles["like-btn"]} onClick={addFavorite}>
+        <button className={styles["like-btn"]} onClick={setFavorite}>
           {isLike ? <BsHeartFill style={{ color: "#ff0000" }} /> : <BsHeart />}
         </button>
       </div>
