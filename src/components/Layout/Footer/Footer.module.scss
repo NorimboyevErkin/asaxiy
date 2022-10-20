@@ -1,0 +1,116 @@
+.footer {
+  padding: 42px 0 27px 0;
+  background: var(--primary);
+
+  &__wrapper {
+    .features {
+      margin-bottom: 40px;
+      &__list {
+        background: var(--white);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 32px;
+        padding: 25px 50px;
+        box-shadow: var(--card-shadow);
+
+        &__item {
+          flex: 1;
+          min-width: 250px;
+          display: flex;
+          align-items: center;
+          .text {
+            margin-left: 24px;
+            p {
+              font-size: 14px;
+              font-weight: normal;
+              line-height: 21px;
+              color: #858997;
+            }
+          }
+          img {
+            width: 50px;
+          }
+        }
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      ul {
+        // overflow: hidden;
+        li {
+          margin-bottom: 12px;
+          transition: all 0.3s ease;
+          strong {
+            color: var(--white);
+            font-size: 18px;
+            line-height: 24px;
+          }
+          a {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            margin-bottom: 12px;
+          }
+
+          &:first-child {
+            margin-bottom: 24px;
+          }
+          &:not(:first-child) {
+            &:hover {
+              transform: translateX(10px);
+            }
+          }
+        }
+        .anons-img {
+          width: 340px;
+          height: 130px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .footer-payments {
+      border-top: 0.2px solid rgba(255, 255, 255, 0.4);
+      border-bottom: 0.2px solid rgba(255, 255, 255, 0.4);
+      margin-top: 20px;
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        li {
+          color: var(--white);
+          a {
+            font-size: 16px;
+            img {
+              width: 55px;
+              max-height: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-info {
+        margin-top: 1rem;
+      p {
+        color: var(--white);
+        text-align: center;
+      }
+    }
+  }
+}

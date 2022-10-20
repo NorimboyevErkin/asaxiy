@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: var(--text-color);
+  background: var(--body-color);
+}
+p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  margin-bottom: 4px;
+}
+h1{
+  font-size: 40px;
+}
+a {
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}

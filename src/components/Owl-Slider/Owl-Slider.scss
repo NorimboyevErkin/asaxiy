@@ -1,0 +1,20 @@
+.owl-slider-box {
+  margin: 30px 0;
+  border-radius: 20px;
+  background: var(--white);
+  padding: 15px 50px;
+  box-shadow: var(--card-shadow);
+  .swiper {
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+      .swiper-slide {
+        img {
+          width: 95px;
+          max-height: 95px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

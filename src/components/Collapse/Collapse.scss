@@ -1,0 +1,15 @@
+.my-collapse {
+  .ant-collapse {
+    border-radius: 20px;
+
+    .ant-collapse-item {
+      &:last-child {
+        border-radius: 20px;
+
+        .ant-collapse-content {
+          border-radius: 0 0 20px 20px;
+        }
+      }
+    }
+  }
+}

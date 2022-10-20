@@ -1,0 +1,13 @@
+.mySwiper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  .swiper-wrapper {
+    .swiper-slide {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

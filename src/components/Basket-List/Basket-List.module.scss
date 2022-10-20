@@ -1,0 +1,79 @@
+.basket-box {
+  box-sizing: border-box;
+  width: 430px;
+  background: var(--white);
+  overflow: hidden;
+  &__product-list {
+    padding: 24px;
+
+    ul {
+      li {
+        background: var(--white);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 12px;
+        padding: 10px;
+        box-shadow: var(--card-shadow);
+
+        img {
+          width: 44px;
+          height: 44px;
+        }
+
+        a {
+          max-width: 180px;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 20px;
+          color: var(--text-color);
+          margin-bottom: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+        .price {
+          font-size: 13px;
+          line-height: 20px;
+        }
+        .close {
+          all: unset;
+          box-sizing: border-box;
+          font-size: 18px;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+
+  &__action {
+    background: var(--muted-blue);
+    padding: 16px 24px 12px 24px;
+
+    .summa {
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      &__all {
+        font-size: 13px;
+        line-height: 16px;
+        color: var(--muted-color);
+      }
+
+      &__total {
+        font-size: 14px;
+        color: var(--text-color);
+      }
+    }
+  }
+}
